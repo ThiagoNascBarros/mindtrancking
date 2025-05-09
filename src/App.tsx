@@ -1,11 +1,10 @@
-import Header from "./components/Header/Header.tsx";
-
+import React from "react";
+import Home from "./Pages/Home";
 
 export default function App() {
-
   return (
-    <>
-      <Header />
-    </>
-  )
+    <div>
+      <Home />
+    </div>
+  );
 }
