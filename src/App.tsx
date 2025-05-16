@@ -1,10 +1,11 @@
 import React from "react";
-import Home from "./Pages/Home";
+import Questionario from "./Pages/Questionario";
+
 
 export default function App() {
   return (
     <div>
-      <Home />
+      <Questionario />
     </div>
   );
 }
