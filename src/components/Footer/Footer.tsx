@@ -5,20 +5,20 @@ import XIcon from "../../../public/images/twiter.svg";
 
 export default function Footer() {
   return (
-    <footer className="border-t-2 border-[#bebebe] bg-white px-6 md:px-20 py-10">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-70 text-center md:text-left">
+    <footer className="border-t-2 border-[#bebebe] bg-white px-4 sm:px-6 md:px-8 lg:px-20 py-8 sm:py-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-16 text-center sm:text-left lg:gap-60">
         {/* Logo e frase */}
-        <div className="flex flex-col items-center md:items-start gap-4">
-          <img src={ImgFooter} alt="Logo" className="w-20 h-20" />
-          <p className="text-sm text-gray-600">
+        <div className="flex flex-col items-center sm:items-start gap-3 sm:gap-4">
+          <img src={ImgFooter} alt="Logo" className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20" />
+          <p className="text-xs sm:text-sm text-gray-600">
             Tecnologia a serviço do seu bem-estar mental.
           </p>
         </div>
 
         {/* Navegação */}
-        <div className="flex flex-col items-center md:items-start">
-          <h3 className="font-semibold mb-2">Navegação</h3>
-          <ul className="text-sm text-gray-700 space-y-1">
+        <div>
+          <h3 className="font-semibold text-sm sm:text-base mb-2">Navegação</h3>
+          <ul className="text-xs sm:text-sm text-gray-700 space-y-1">
             <li>
               <a href="/" className="hover:text-[#2544F4] transition">
                 Início
@@ -53,23 +53,23 @@ export default function Footer() {
         </div>
 
         {/* Contato */}
-        <div className="flex flex-col items-center md:items-start gap-2">
-          <h3 className="font-semibold">Contato</h3>
-          <p className="text-sm text-gray-700">(11) 99999-9999</p>
-          <p className="text-sm text-gray-700">contato@mindtracking.com</p>
-          <div className="flex gap-4 mt-2">
+        <div>
+          <h3 className="font-semibold text-sm sm:text-base">Contato</h3>
+          <p className="text-xs sm:text-sm text-gray-700">(11) 99999-9999</p>
+          <p className="text-xs sm:text-sm text-gray-700">contato@mindtracking.com</p>
+          <div className="flex gap-4 mt-2 justify-center sm:justify-start">
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
               <img
                 src={InstagramIcon}
                 alt="Instagram"
-                className="w-5 h-5 hover:opacity-75 hover:scale-110 transition-transform duration-200"
+                className="w-4 h-4 sm:w-5 sm:h-5 hover:opacity-75 hover:scale-110 transition-transform duration-200"
               />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
               <img
                 src={XIcon}
                 alt="Twitter"
-                className="w-5 h-5 hover:opacity-75 hover:scale-110 transition-transform duration-200"
+                className="w-4 h-4 sm:w-5 sm:h-5 hover:opacity-75 hover:scale-110 transition-transform duration-200"
               />
             </a>
           </div>
