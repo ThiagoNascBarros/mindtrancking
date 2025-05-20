@@ -1,5 +1,5 @@
 import Logo from "../../../public/assets/Logo.svg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
@@ -41,55 +41,60 @@ export default function Header() {
         open: { opacity: 1, x: 0 }
     };
 
+    const navLinkClass = ({ isActive }: { isActive: boolean }) => 
+        `text-[#000] hover:text-[#2544F4] font-medium transition-colors text-base ${
+            isActive ? 'text-[#2544F4] opacity-100' : 'opacity-65 hover:opacity-100'
+        }`;
+
     return (
         <header className="h-[86px] px-4 sm:px-8 md:px-12 lg:px-[120px] flex items-center justify-between border-[#bebebe] border-b-[2px] relative">
             <div>
-                <Link to="/">
+                <NavLink to="/">
                     <img 
                         src={ Logo } 
                         alt="logo" 
                         className="w-[160px] md:w-[180px] lg:w-[212px] h-[46px]"
                     />
-                </Link>
+                </NavLink>
             </div>
 
             {/* Menu Desktop */}
             <nav className="hidden lg:block">
                 <ul className="flex gap-16">
                     <li>
-                        <Link 
+                        <NavLink 
                             to="/"
-                            className="text-[#000] hover:text-[#2544F4] font-medium opacity-65 hover:opacity-100 text-base"
+                            className={navLinkClass}
                         >
                             Inicio
-                        </Link>
+                        </NavLink>
                     </li>
                     
                     <li>
-                        <Link 
+                        <NavLink 
                             to="/questionarios"
-                            className="text-[#000] hover:text-[#2544F4] font-medium opacity-65 hover:opacity-100 text-base"
+                            className={navLinkClass}
                         >
                             Questionários
-                        </Link>
+                        </NavLink>
                     </li>
                     
                     <li>
-                        <Link
+                        <NavLink
                             to="/mind-ai"
-                            className="text-[#000] hover:text-[#2544F4] font-medium opacity-65 hover:opacity-100 text-base"
+                            className={navLinkClass}
                         >
                             Mind AI
-                        </Link>
+                        </NavLink>
                     </li>
                     
                     <li>
-                        <Link 
+                        <NavLink 
                             to="/dashboard"
-                            className="text-[#000] hover:text-[#2544F4] font-medium opacity-65 hover:opacity-100 text-base"
+                            className={navLinkClass}
                         >
                             Dashboard
-                        </Link>
+                        </NavLink>
                     </li>
                 </ul>
             </nav>
@@ -142,52 +147,52 @@ export default function Header() {
                                 variants={menuItemVariants}
                                 transition={{ delay: 0.1 }}
                             >
-                                <Link 
+                                <NavLink 
                                     to="/"
-                                    className="text-[#000] hover:text-[#2544F4] font-medium opacity-65 hover:opacity-100 text-base md:text-lg block"
+                                    className={navLinkClass}
                                     onClick={toggleMenu}
                                 >
                                     Inicio
-                                </Link>
+                                </NavLink>
                             </motion.li>
                             
                             <motion.li
                                 variants={menuItemVariants}
                                 transition={{ delay: 0.2 }}
                             >
-                                <Link 
+                                <NavLink 
                                     to="/questionarios"
-                                    className="text-[#000] hover:text-[#2544F4] font-medium opacity-65 hover:opacity-100 text-base md:text-lg block"
+                                    className={navLinkClass}
                                     onClick={toggleMenu}
                                 >
                                     Questionários
-                                </Link>
+                                </NavLink>
                             </motion.li>
                             
                             <motion.li
                                 variants={menuItemVariants}
                                 transition={{ delay: 0.3 }}
                             >
-                                <Link
+                                <NavLink
                                     to="/mind-ai"
-                                    className="text-[#000] hover:text-[#2544F4] font-medium opacity-65 hover:opacity-100 text-base md:text-lg block"
+                                    className={navLinkClass}
                                     onClick={toggleMenu}
                                 >
                                     Mind AI
-                                </Link>
+                                </NavLink>
                             </motion.li>
                             
                             <motion.li
                                 variants={menuItemVariants}
                                 transition={{ delay: 0.4 }}
                             >
-                                <Link 
+                                <NavLink 
                                     to="/dashboard"
-                                    className="text-[#000] hover:text-[#2544F4] font-medium opacity-65 hover:opacity-100 text-base md:text-lg block"
+                                    className={navLinkClass}
                                     onClick={toggleMenu}
                                 >
                                     Dashboard
-                                </Link>
+                                </NavLink>
                             </motion.li>
 
                             <motion.li
